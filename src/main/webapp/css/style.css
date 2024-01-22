@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(182, 187, 196);
+    padding-bottom: 3rem;
+}
+
+
+.container{
+    padding-top: 2.5rem;
+    width: 50rem;
+}
+
+.logoInicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    font-weight: bold;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 2.5rem;
+}

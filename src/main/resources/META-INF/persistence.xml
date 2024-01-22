@@ -4,6 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.hackaboss.pruebatec2.models.Citizen</class>
     <class>com.hackaboss.pruebatec2.models.Turn</class>
+    <class>com.hackaboss.pruebatec2.models.Users</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/turnero?serverTimezone=UTC"/>

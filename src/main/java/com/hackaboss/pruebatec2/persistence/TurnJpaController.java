@@ -12,6 +12,7 @@ import javax.persistence.criteria.Root;
 import com.hackaboss.pruebatec2.models.Citizen;
 import com.hackaboss.pruebatec2.models.Turn;
 import com.hackaboss.pruebatec2.persistence.exceptions.NonexistentEntityException;
+import java.time.LocalDate;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -168,5 +169,18 @@ public class TurnJpaController implements Serializable {
             em.close();
         }
     }
+    
+    public List<Turn> findTurnEntitiesByDate(LocalDate date){
+        EntityManager em = getEntityManager();
+        try{
+            String queryString = "SELECT * FROM turn WHERE date BETWEEN '"+date+" 00:00:00' AND '"+date+" 23:59:59'";
+            Query query = em.createNativeQuery(queryString,Turn.class);
+          List<Turn> list=query.getResultList();
+          return list;
+        }finally{
+            em.close();
+        }
+    }
+
 
 }
