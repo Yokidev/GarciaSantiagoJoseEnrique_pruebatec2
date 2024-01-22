@@ -15,6 +15,7 @@ Un contenedor de servlet como Apache Tomcat para desplegar el proyecto web
 ```
 _Supuestos:_ <br>
 De cara al usuario el id de los turnos corresponde con el nº de turno. Se ajudican automaticamente cuando se crea un nuevo turno por orden de entrada.
+La identificacion de ciudadano es única y no puede haber dos iguales en la base de datos.
 El usuario tiene conocimiento de su identificacion para registrarse y pedir turnos en la BBDD asi como del usuario y contraseña de la misma.
 ```
 Usuario: root
