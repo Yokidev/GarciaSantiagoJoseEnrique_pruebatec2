@@ -73,6 +73,17 @@
                         <button type="submit" class="btn btn-primary">Actualizar</button>
                     </form>
                 </div>
+                <div class="container">
+                    <h3 style="text-align: center;">Borrar registro de ciudadano</h3>
+
+                    <form action="SvDeleteCitizen" method="POST" id="admin">
+                        <div class="mb-3">
+                            <label for="id" class="form-label">Introduce el id ciudadano</label>
+                            <input type="text" class="form-control" name="id" required />
+                        </div>
+                        <button type="submit" class="btn btn-danger">Borrar</button>
+                    </form>
+                </div>
 
                 <br>
                 <br>
@@ -114,6 +125,17 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Actualizar</button>
                 </form>
+                <div class="container">
+                    <h3 style="text-align: center;">Borrar turno</h3>
+
+                    <form action="SvDeleteTurn" method="POST" id="admin">
+                        <div class="mb-3">
+                            <label for="id" class="form-label">Introduce el Nº de turno</label>
+                            <input type="text" class="form-control" name="id" required />
+                        </div>
+                        <button type="submit" class="btn btn-danger">Borrar</button>
+                    </form>
+                </div>
             </div>
         </main>
     </body>

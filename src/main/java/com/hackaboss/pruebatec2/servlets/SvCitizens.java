@@ -21,6 +21,13 @@ public class SvCitizens extends HttpServlet {
 
     }
 
+    /***
+     * Devuelve la lista de ciudadanos en la BBDD
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException 
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -35,6 +42,13 @@ public class SvCitizens extends HttpServlet {
 
     }
 
+    /***
+     * Comprueba si un usuario esta registrado. Si no lo está, manda a la controladora los parametros para su creacion.
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException 
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

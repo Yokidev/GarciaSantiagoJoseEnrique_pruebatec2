@@ -80,7 +80,8 @@ public class PersistenceController {
     public Turn findTurn(int id) {
         return turnJpaController.findTurn(id);
     }
-
+    
+    //User
     public List<Users> getUsers() {
         return usersJpaController.findUsersEntities();
     }

@@ -25,6 +25,13 @@ public class SvTurns extends HttpServlet {
 
     }
 
+    /***
+     * Devuelve a la vista la lista de turnos solicitada.
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException 
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,6 +47,13 @@ public class SvTurns extends HttpServlet {
         response.sendRedirect("showTurns.jsp");
     }
 
+    /***
+     * Comprueba si un turno esta registrado. Si no lo está, manda a la controladora los parametros para su creación.
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException 
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

@@ -14,47 +14,49 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 @WebServlet(name = "SvEditCitizen", urlPatterns = {"/SvEditCitizen"})
 public class SvEditCitizen extends HttpServlet {
 
     Controller control = new Controller();
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    
+
     }
 
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
-        
+
     }
 
-    
+    /**
+     * *
+     * Manda a la controladora los parametros del ciudadano que se quiere
+     * modificar de la BBDD
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         int id = Integer.parseInt(request.getParameter("id"));
-        
         String name = request.getParameter("name");
-        
         int age = Integer.parseInt(request.getParameter("age"));
-        
         String identification = request.getParameter("identification");
-        
-        control.editCitizen(id, name, age, identification);
-        
-        response.sendRedirect("editTurn.jsp");
-        
-        
+        try {
+            control.editCitizen(id, name, age, identification);
+            response.sendRedirect("editTurn.jsp");
+        } catch (Exception e) {
+            response.sendRedirect("error.jsp");
+        }
+
     }
 
-    
     @Override
     public String getServletInfo() {
         return "Short description";
