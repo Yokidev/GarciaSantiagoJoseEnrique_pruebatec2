@@ -14,8 +14,7 @@ Un gestor de bases de datos compatible con MySQL
 Un contenedor de servlet como Apache Tomcat para desplegar el proyecto web
 ```
 _Supuestos:_ <br>
-De cara al usuario el id de los turnos corresponde con el nº de turno. Se ajudican automaticamente cuando se crea un nuevo turno.
-El orden de atender a los ciudadanos seria primero por hora de la fecha y si coinciden por numero de turno mas bajo.
+De cara al usuario el id de los turnos corresponde con el nº de turno. Se ajudican automaticamente cuando se crea un nuevo turno por orden de entrada.
 El usuario tiene conocimiento de su identificacion para registrarse y pedir turnos en la BBDD asi como del usuario y contraseña de la misma.
 ```
 Usuario: root
@@ -59,7 +58,7 @@ La aplicación permite a los usuarios realizar distintas operaciones en funcion 
 - `Mostrar turnos`: Muestra por pantalla los turnos en funcion de los siguientes filtros: fecha y estado(todos, en espera o ya atendido).
   
 ![mostrarturno](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/f8745464-33fb-493f-b4aa-110631b1c31e)
-![mostrar](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/0e2a639b-a08c-4761-acd2-88b3b663e25d)
+![mostrar](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/30eba7a0-63a5-47c9-8c47-ff662c7db3cb)
 
 ### Administrador
 Proporciona las herramientas para poder modificar y visualizar la BBDD.
@@ -91,15 +90,16 @@ Contraseña: nosoybrucewayne
 
 ![todosturnos](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/ea461efe-9299-4073-9121-82a206f98a0d)
 
-![tablaturnos](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/ca56800d-1dd5-44cd-8d3f-5cc04787fd7e)
+![tablaturnos](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/02bba9bf-909f-4271-bf00-2cb6b607956b)
+
 
 - `Actualizar turno`: Permite actualizar la informacion de un turno de la base de datos.
   
-![actturno](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/515e1517-e43d-42bb-91a0-4591a9e8dcd8)
+![actturno](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/bd1c951b-958e-4067-be4b-3cf7d1681938)
 
 - `Borrar turno`: Permite eliminar el registro de un turno de la base de datos.
 
-![borrarturno](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/db73d3cb-f43e-4e0a-8343-944fd3e4ca3f)
+![borrarturno](https://github.com/Yokidev/GarciaSantiagoJoseEnrique_pruebatec2/assets/113154741/081e04c0-6064-4365-946b-2fb96d0f5d5c)
 
 
 ## Construido con 🛠️
