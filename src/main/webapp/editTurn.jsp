@@ -16,7 +16,7 @@
     </head>
     <body>
 
-        <!<!-- Validacion de sessión -->
+        <!-- Validacion de sessión -->
         <% HttpSession mysession = request.getSession();
             String user = (String) request.getSession().getAttribute("user");
 
