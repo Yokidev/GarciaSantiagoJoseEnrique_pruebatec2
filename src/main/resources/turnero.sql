@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-01-2024 a las 13:38:19
+-- Tiempo de generación: 22-01-2024 a las 16:11:39
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -77,7 +77,7 @@ INSERT INTO `sequence` (`SEQ_NAME`, `SEQ_COUNT`) VALUES
 CREATE TABLE `turn` (
   `ID` int(11) NOT NULL,
   `ATTENDED` tinyint(1) DEFAULT 0,
-  `DATE` datetime DEFAULT NULL,
+  `DATE` date DEFAULT NULL,
   `DESCRIPTION` varchar(255) DEFAULT NULL,
   `citizen_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -87,16 +87,16 @@ CREATE TABLE `turn` (
 --
 
 INSERT INTO `turn` (`ID`, `ATTENDED`, `DATE`, `DESCRIPTION`, `citizen_id`) VALUES
-(9, 0, '2024-01-30 12:30:00', 'Robo', 1),
-(10, 0, '2024-01-31 12:30:00', 'Renovar identificacion', 1),
-(11, 0, '2024-01-30 15:30:00', 'Denuncia', 2),
-(12, 0, '2024-02-02 10:30:00', 'Robo', 2),
-(13, 0, '2024-01-25 14:30:00', 'Denuncia', 3),
-(14, 0, '2024-01-22 14:30:00', 'Robo', 3),
-(15, 0, '2024-01-30 08:30:00', 'Denuncia', 12),
-(16, 1, '2024-01-19 12:32:00', 'Denuncia', 11),
-(17, 1, '2024-01-19 12:33:00', 'Robo', 10),
-(18, 0, '2024-01-19 15:30:00', 'Burocracia', 14);
+(9, 1, '2024-01-30', 'Robo', 1),
+(10, 0, '2024-01-31', 'Renovar identificacion', 1),
+(11, 0, '2024-01-30', 'Denuncia', 2),
+(12, 0, '2024-02-02', 'Robo', 2),
+(13, 0, '2024-01-25', 'Denuncia', 3),
+(14, 0, '2024-01-22', 'Robo', 3),
+(15, 0, '2024-01-30', 'Denuncia', 12),
+(16, 1, '2024-01-19', 'Denuncia', 11),
+(17, 1, '2024-01-19', 'Robo', 10),
+(18, 0, '2024-01-19', 'Burocracia', 14);
 
 -- --------------------------------------------------------
 

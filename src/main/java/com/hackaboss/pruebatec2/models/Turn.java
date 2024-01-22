@@ -1,6 +1,7 @@
 package com.hackaboss.pruebatec2.models;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,25 +12,23 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Turn implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    LocalDateTime date;
+    LocalDate date;
     String description;
     boolean attended; // Inicializado en el constructor como falso por defecto
-    
+
     @ManyToOne
     @JoinColumn(name = "citizen_id")
     Citizen citizen;
 
-    
-    
     public Turn() {
     }
 
-    public Turn(LocalDateTime date, String description, Citizen citizen) {
-        
+    public Turn(LocalDate date, String description, Citizen citizen) {
+
         this.date = date;
         this.description = description;
         this.attended = false;
@@ -39,16 +38,16 @@ public class Turn implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
-    
+
     public int getId() {
         return id;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -75,9 +74,5 @@ public class Turn implements Serializable {
     public void setCitizen(Citizen citizen) {
         this.citizen = citizen;
     }
-    
-    
-    
-    
-    
+
 }

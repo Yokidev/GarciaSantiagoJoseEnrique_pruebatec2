@@ -173,7 +173,7 @@ public class TurnJpaController implements Serializable {
     public List<Turn> findTurnEntitiesByDate(LocalDate date){
         EntityManager em = getEntityManager();
         try{
-            String queryString = "SELECT * FROM turn WHERE date BETWEEN '"+date+" 00:00:00' AND '"+date+" 23:59:59'";
+            String queryString = "SELECT * FROM turn WHERE date='"+date+"';";
             Query query = em.createNativeQuery(queryString,Turn.class);
           List<Turn> list=query.getResultList();
           return list;

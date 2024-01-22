@@ -4,6 +4,7 @@ import com.hackaboss.pruebatec2.models.Controller;
 import com.hackaboss.pruebatec2.models.Turn;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -63,12 +64,12 @@ public class SvShowTurnsEdit extends HttpServlet {
 
         String state = (String) request.getParameter("state");
 
-        LocalDateTime fecha = LocalDateTime.parse(request.getParameter("date"));
+        LocalDate date = LocalDate.parse(request.getParameter("date"));
 
         String description = request.getParameter("description");
 
         try {
-            control.editTurn(id, state, fecha, description);
+            control.editTurn(id, state, date, description);
             response.sendRedirect("editTurn.jsp");
         } catch (Exception e) {
             response.sendRedirect("error.jsp");

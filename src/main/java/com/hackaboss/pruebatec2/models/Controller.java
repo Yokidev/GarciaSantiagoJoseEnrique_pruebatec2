@@ -2,8 +2,6 @@ package com.hackaboss.pruebatec2.models;
 
 import com.hackaboss.pruebatec2.persistence.PersistenceController;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -71,11 +69,11 @@ public class Controller {
      * @param description
      * @param identification 
      */
-    public void createTurn(LocalDateTime fecha, String description, String identification) {
+    public void createTurn(LocalDate date, String description, String identification) {
     
         Citizen citizen = persistenceController.findCitizenByIdentification(identification);
         
-        persistenceController.createTurn(new Turn(fecha,description,citizen));
+        persistenceController.createTurn(new Turn(date,description,citizen));
         
     }
     
@@ -95,7 +93,7 @@ public class Controller {
      * @param date
      * @param description 
      */
-    public void editTurn(int id, String state, LocalDateTime date, String description) {
+    public void editTurn(int id, String state, LocalDate date, String description) {
     
         //Recuperamos el turno que queremos editar
         Turn turn = findTurn(id);

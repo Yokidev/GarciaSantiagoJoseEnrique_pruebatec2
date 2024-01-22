@@ -58,14 +58,14 @@ public class SvTurns extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        LocalDateTime fecha = LocalDateTime.parse(request.getParameter("date"));
+        LocalDate date = LocalDate.parse(request.getParameter("date"));
         String description = request.getParameter("description");
         String identification = request.getParameter("identification");
 
         try {
             Citizen citizen = control.findCitizenByIdentification(identification);
             if (citizen != null) {
-                control.createTurn(fecha, description, identification);
+                control.createTurn(date, description, identification);
                 response.sendRedirect("success.jsp");
             }
 

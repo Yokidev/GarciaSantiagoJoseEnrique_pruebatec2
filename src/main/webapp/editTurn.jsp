@@ -96,7 +96,7 @@
 
                 <form action="SvShowTurnsEdit" method="POST" id="admin">
                     <div class="mb-3">
-                        <label for="id">Nº Turno</label>
+                        <label for="id">Id Turno</label>
                         <input type="number" class="form-control" name="id" required />
                     </div>
                     <div class="mb-3">
@@ -109,7 +109,7 @@
                     <div class="mb-3">
                         <label for="date">Fecha</label>
                         <input
-                            type="datetime-local"
+                            type="date"
                             class="form-control"
                             name="date"
                             required
@@ -130,7 +130,7 @@
 
                     <form action="SvDeleteTurn" method="POST" id="admin">
                         <div class="mb-3">
-                            <label for="id" class="form-label">Introduce el Nº de turno</label>
+                            <label for="id" class="form-label">Introduce el id del turno</label>
                             <input type="text" class="form-control" name="id" required />
                         </div>
                         <button type="submit" class="btn btn-danger">Borrar</button>

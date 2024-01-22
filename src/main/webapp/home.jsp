@@ -63,7 +63,7 @@
                     <div class="mb-3">
                         <label for="date">Fecha</label>
                         <input
-                            type="datetime-local"
+                            type="date"
                             class="form-control"
                             name="date"
                             required
