@@ -14,7 +14,8 @@ Un gestor de bases de datos compatible con MySQL
 Un contenedor de servlet como Apache Tomcat para desplegar el proyecto web
 ```
 _Supuestos:_ <br>
-De cara al usuario el id de los turnos corresponde con el nº de turno. Se ajudican automaticamente cuando se crea un nuevo turno de forma ordenada.
+De cara al usuario el id de los turnos corresponde con el nº de turno. Se ajudican automaticamente cuando se crea un nuevo turno.
+El orden de atender a los ciudadanos seria primero por hora de la fecha y si coinciden por numero de turno mas bajo.
 El usuario tiene conocimiento de su identificacion para registrarse y pedir turnos en la BBDD asi como del usuario y contraseña de la misma.
 ```
 Usuario: root
